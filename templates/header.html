@@ -1,11 +1,8 @@
-<nav class="navbar navbar-inverse navbar-static-top">
+<!--<nav class="navbar navbar-inverse navbar-static-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{% url 'home' %}">
                 <i class="fa fa-comments"></i> TSMC OneStop
@@ -17,10 +14,10 @@
                 <li>
                     <a href="{% url 'chat' %}">Chat</a>
                 </li>
-            </ul>
+            </ul>-->
 
 
-            <ul class="nav navbar-nav navbar-right">
+            <!--<ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
                 <li>
                     <a href="">
@@ -39,8 +36,45 @@
                     </a>
                 </li>
                 {% endif %}
-            </ul>
+            </ul>-->
+<nav class="navbar navbar-expand-md navbar-inverse navbar-static-top bg-dark">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+        </button>
+        <a class="navbar-brand"  id="tsmc-OneStop" href="{% url 'home' %}">
+            <i class="fa fa-comments"></i> TSMC OneStop
+        </a>
+    </div>
 
-        </div>
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'chat' %}">Chat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">File-Upload</a>
+            </li>
+        </ul>
+        {% if user.is_authenticated %}
+            <ul class="navbar-nav mr-right">
+                <li class="nav-item">
+                    <a class="nav-link">Logged in as {{ user.username }}</a>
+                </li>
+                <form class="form-inline my-2 my-lg-0 d-flex" action="{% url 'logout' %}" method="POST">
+                    {% csrf_token %}
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+                </form>
+            </ul>
+        {% else %}
+            <form class="form-inline my-2 my-lg-0 d-flex" action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                <input class="form-control mr-sm-2" type="text" placeholder="Username" aria-label="Username"
+                    name="username" id="id_username">
+                <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password"
+                    name="password" id="id_password">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign in</button>
+            </form>
+        {% endif %}
     </div>
 </nav>
