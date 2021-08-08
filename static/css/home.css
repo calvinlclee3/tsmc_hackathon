@@ -1,7 +1,7 @@
 .info-card {
     padding: 1.5rem;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: 4rem;
+    margin-left: 4rem;
     border-width: 1px;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
@@ -9,8 +9,8 @@
 }
 
 .home-header-setting {
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: 4rem;
+    margin-left: 4rem;
 }
 
 .info-title{
@@ -18,7 +18,7 @@
 }
 
 .card-space {
-    margin: 1rem 0.75 rem 1 rem 0.75rem;
+    margin: 1rem 0.75rem 1rem 0.75rem;
     border-width: 1px;
 }
 
