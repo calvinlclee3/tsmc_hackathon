@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block navbar %}{% endblock %}
+{% block css %}
+    <link href="{% static 'css/users.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="file_upload position-absolute top-0 start-0">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title">Required Documents Upload</h1><hr>
+          <div class="mb-4">
+            <label for="formFile" class="form-label">Signed Acknowledgement 聘僱通知書 (正本簽名)</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          <div class="mb-4">
+            <label for="formFile" class="form-label">Appendix II-A: New Hire Acknowledgement and Declaration 附錄II-A: 新進員工聲明書 (正本簽名)</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          <div class="mb-4">
+            <label for="formFile" class="form-label">ID Card/Passport 身份證/護照</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          <div class="mb-4">
+            <label for="formFile" class="form-label">Highest Degree Certificate of Graduation/Enrollment 最高學歷畢業/在學證明</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          <div class="mb-4">
+            <label for="formFile" class="form-label">Proof of Termination from previous employer (Optional) 前公司離職證明</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          <div class="mb-4">
+            <label for="formFile" class="form-label">Physical Examination 體檢單</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          <div class="mb-4">
+            <label for="formFile" class="form-label">Standard ID Photo 護照規格大頭照</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+        </div>
+        <div class="mb-4">
+            <div class="file-up-btn d-grid gap-2 d-md-block btn-group-lg">
+                <button type="submit" value="Submit" class="btn btn-outline-success">Save</button>
+                <button type="submit" value="Submit" class="btn btn-outline-primary">Submit</button>
+            </div>
+        </div>     
+      </div>
+    </div>
+</div>
+{% endblock %}

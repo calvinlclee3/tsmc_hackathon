@@ -1,0 +1,28 @@
+.info {
+    padding: 1.5rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    border-width: 1px;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    font-size: 2rem;
+}
+
+label {
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+.file_upload, .login {
+    padding: 1.5rem;
+    margin-right: 20%;
+    margin-left: 20%;
+    border-width: 1px;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    font-size: 2.3rem;
+}
+
+.file-up-btn {
+    margin-left: 1.5rem;
+}
