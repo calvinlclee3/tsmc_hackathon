@@ -6,8 +6,16 @@
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
 {% endblock %}
 {% block content %}
-<div class="container-fluid">
-    <div class="file_upload position-absolute top-0 start-0">
+<div class="jumbotron">
+  <div class="container-fluid">
+      <div class="home-header-setting">
+          <h1 class="display-3">Hello, TSMC Newcomers!</h1>
+          <p>Upload Required Documents here!</p>
+      </div>
+  </div>
+</div>
+<div class="info row">
+    <div class="col-mt-9">
       <div class="card">
         <div class="card-body">
           <h1 class="card-title">Required Documents Upload</h1><hr>
@@ -41,7 +49,8 @@
           </div>
         </div>
         <div class="mb-4">
-            <div class="file-up-btn d-grid gap-2 d-md-block btn-group-lg">
+            <div class="d-grid gap-2 d-md-block btn-group-lg">
+                <span class="col-sm-4"></span>
                 <button type="submit" value="Submit" class="btn btn-outline-success">Save</button>
                 <button type="submit" value="Submit" class="btn btn-outline-primary">Submit</button>
             </div>
