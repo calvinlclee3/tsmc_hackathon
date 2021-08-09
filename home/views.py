@@ -5,7 +5,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from django.views.generic import TemplateView, View
 
-
+def FileView(request):
+    return render(request, 'users/file_upload.html')
 
 class LoginView(TemplateView, View):
     template_name = 'users/login.html'
@@ -61,6 +62,12 @@ class RegisterView(TemplateView):
 
 class MembersView(LoginRequiredMixin, TemplateView, View):
     template_name = 'users/members_only.html'
+
+    def get(self, request, *args, **kwargs):
+        return self.render_to_response({})
+
+class FileView(LoginRequiredMixin, TemplateView, View):
+    template_name = 'users/file_upload.html'
 
     def get(self, request, *args, **kwargs):
         return self.render_to_response({})

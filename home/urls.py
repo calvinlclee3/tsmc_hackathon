@@ -5,6 +5,8 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+
+
     path('', login_required(
         TemplateView.as_view(template_name='home/index.html')), name='home'),
     url(
@@ -29,5 +31,17 @@ urlpatterns = [
         view=views.MembersView.as_view(),
         name='members'
     ),        
-        
+    
+    url(
+        regex=r'^file/$',
+        view=views.FileView.as_view(),
+        name='file'
+    ),
+
+    url(
+        regex=r'^info/$',
+        view=views.MembersView.as_view(),
+        name='info'
+    )
+    
 ]
