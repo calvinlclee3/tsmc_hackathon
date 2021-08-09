@@ -1,0 +1,27 @@
+.info-card {
+    padding: 1.5rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    border-width: 1px;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    font-size: 2rem;
+}
+
+.home-header-setting {
+    margin-right: 4rem;
+    margin-left: 4rem;
+}
+
+.info-title{
+    font-weight: 630;
+}
+
+.card-space {
+    margin: 1rem 0.75rem 1rem 0.75rem;
+    border-width: 1px;
+}
+
+.card-text {
+    font-size: 1.7rem;
+}
