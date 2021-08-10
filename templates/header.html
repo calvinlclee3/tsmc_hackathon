@@ -15,7 +15,7 @@
                     <a class="nav-link" href="{% url 'chat' %}">Chat</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Calendar</a>
+                    <a class="nav-link" href="{% url 'fullcalendar' %}">Calendar</a>
                 </li>
             </ul>
 
@@ -23,7 +23,7 @@
             <ul class="navbar-nav">
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-user-circle" aria-hidden="true"></i>{{ user.username }}</a>
+                    <a class="nav-link" href="{% url 'members' %}"><i class="fa fa-user-circle" aria-hidden="true"></i>{{ user.username }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>

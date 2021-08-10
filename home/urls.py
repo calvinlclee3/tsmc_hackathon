@@ -42,6 +42,12 @@ urlpatterns = [
         regex=r'^info/$',
         view=views.MembersView.as_view(),
         name='info'
+    ),
+    url(
+        regex=r'^fullcalendar/',
+        view=TemplateView.as_view(template_name="fullcalendar/fullcalendar.html"),
+        name='fullcalendar'
     )
+    
     
 ]

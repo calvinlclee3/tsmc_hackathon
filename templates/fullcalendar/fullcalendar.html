@@ -1,0 +1,60 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link rel='stylesheet' type='text/css' href="{% static 'fullcalendar/dist/fullcalendar.css' %}" />
+<!-- <link rel='stylesheet' type='text/css' href="{% static '../assets/fullcalendar/dist/fullcalendar.css' %}" /> -->
+<script type='text/javascript' src="{% static 'moment/moment.js' %}"></script>
+<script type='text/javascript' src="{% static 'fullcalendar/dist/fullcalendar.js' %}"></script>
+{% endblock %}{% block content %}
+
+<div id="calendar"></div>
+<script type='text/javascript'>
+$(document).ready(function() {
+  console.log('enternenternenternenternenternenternenternenternenternenternenternenternenternenternentern')
+    // page is now ready, initialize the calendar...
+    $('#calendar').fullCalendar({
+      eventColor: 'green',
+      // put your options and callbacks here
+      editable: false,
+      // events: '/schedule/api/occurrences?calendar_slug=example'
+      events: 
+      [
+        {
+          title: 'DevOps Boot Camp0- \n \
+          DevOps的初步介紹，帶你了解Docker與K8S---\n \
+          https:\\127.0.0.1',
+          start: moment().subtract(1, 'days').format('YYYY-MM-DD HH:mm:ss')// '2021-07-16T16:00:00'
+        },
+        {
+          title: 'MERN stack workshop \n \
+          由台積講師教你如何學習MERN stack \n \
+          https:\\127.0.0.2',
+          start: '2021-07-26T16:00:00'
+        },
+        {
+          title: '持續一周的活動',
+          start: moment().add(7, 'days').format('YYYY-MM-DD'),
+          end: moment().add(14, 'days').format('YYYY-MM-DD'),
+          color: 'lightBlue'
+        }
+      ],
+      dayClick: function(date, event, view) {
+        console.log('add event');
+        console.log(date);
+        console.log(event);
+        console.log(view);
+      },
+      eventClick: function(date, event, view) {
+        console.log('modify event');
+        console.log(date);
+        console.log(event);
+        console.log(view);
+      }
+    })
+    $('#calendar').fullCalendar('renderEvent', 
+    {
+      title: '明天的活動',
+      start: moment().add(1, 'days').format('YYYY-MM-DD')
+    });
+});
+</script>
+
+{% endblock %}

@@ -6,76 +6,87 @@
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
 {% endblock %}
 {% block content %}
-<div class="info">
-    <div class="col-sm-4">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title">User Info</h2>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Name:</li>
-            <li class="list-group-item">Email:</li>
-            <li class="list-group-item">Phone:</li>
-            <li class="list-group-item">Department:</li>
-            <li class="list-group-item">Onboarding Date:</li>
-            <li class="list-group-item">Employee Status: {Regular/ Contractor or Intern}</li>
-          </ul>
-        </div>
+<div class="jumbotron">
+  <div class="container-fluid">
+      <div class="home-header-setting">
+          <h1 class="display-3">Hello, TSMC Newcomers!</h1>
+          <p>You can see your profile and some helpful information here.</p>
+          <p><a class="btn btn-primary btn-lg" href="{% url 'file' %}" role="button">Upload Documents &raquo;</a></p>
+      </div>
+  </div>
+</div>
+<div class="user-profile">
+<div class="info row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">User Info</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Name: Admin</li>
+          <li class="list-group-item">Email: admin@tsmc.com</li>
+          <li class="list-group-item">Phone: 701-2345</li>
+          <li class="list-group-item">Department: RDIT</li>
+          <li class="list-group-item">Onboarding Date: 07/05/2021</li>
+          <li class="list-group-item">Employee Status: Intern</li>
+        </ul>
       </div>
     </div>
-    <div class="col-sm-4">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title">Mentor & HR Representitive</h2>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Mentor: {MentorName}
-                <ul>
-                    <li>
-                        Email: {Mentor's Email}
-                    </li>
-                    <li>
-                        Phone: {Mentor's Phone Number}
-                    </li>
-                </ul>
-            </li>
-            <li class="list-group-item">HR: {HR Name}
-                <ul>
-                    <li>
-                        Email: {HR's Email}
-                    </li>
-                    <li>
-                        Phone: {HR's Phone Number}
-                    </li>
-                </ul>
-            </li>
-            <li class="list-group-item btn-group-lg">
-                <a href="{% url 'chat' %}" class="btn btn-outline-primary">Chat with Mentor/HR</a>
-            </li>
-          </ul>              
-        </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Mentor & HR Representitive</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Mentor: Mentor
+              <ul>
+                  <li>
+                      Email: mentor@tsmc.com
+                  </li>
+                  <li>
+                      Phone: 712-3456
+                  </li>
+              </ul>
+          </li>
+          <li class="list-group-item">HR: HR
+              <ul>
+                  <li>
+                      Email: hr@tsmc.com
+                  </li>
+                  <li>
+                      Phone: 723-4567
+                  </li>
+              </ul>
+          </li>
+          <li class="list-group-item btn-group-lg">
+              <a href="{% url 'chat' %}" class="btn btn-outline-primary">Chat with Mentor/HR</a>
+          </li>
+        </ul>              
       </div>
     </div>
-    <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <h2 class="card-title">Things Required</h2>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Before Onboarding:
-                    <ul>
-                        <li>Signed acknowledgement</li>
-                        <li>Appendix II-A: New Hire Acknowledgement and Declaration</li>
-                        <li>Physical Examination</li>
-                        <li>Photo</li>
-                        <li>Dorm Registration (optional)</li>
-                    </ul>
-                </li>
-                <li class="list-group-item">Onboarding Day:
-                    <ul>
-                        <li>Employee ID</li>
-                        <li>Business Phone/Laptop/PC</li>
-                    </ul>
-                </li>
-            </ul>                  
-        </div>
-    </div>
+  </div>
+  <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Things Required</h2>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">Before Onboarding:
+                  <ul>
+                      <li>Signed acknowledgement</li>
+                      <li>Appendix II-A: New Hire Acknowledgement and Declaration</li>
+                      <li>Physical Examination</li>
+                      <li>Photo</li>
+                      <li>Dorm Registration (optional)</li>
+                  </ul>
+              </li>
+              <li class="list-group-item">Onboarding Day:
+                  <ul>
+                      <li>Employee ID</li>
+                      <li>Business Phone/Laptop/PC</li>
+                  </ul>
+              </li>
+          </ul>                  
+      </div>
+  </div>
+</div>
 </div>
 {% endblock %}
