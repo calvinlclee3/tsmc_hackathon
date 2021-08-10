@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% load static %} {% block navbar %}{% endblock %} {% block head %}
-{% endblock %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" type="text/css"/> {% endblock %} {% block content %}
 <div class="jumbotron">
     <div class="container-fluid">
         <div class="home-header-setting">
@@ -9,103 +9,115 @@
         </div>
     </div>
 </div>
-<div class="row row-cols-2">
-    <div class="col">
-        <div class="card">
-            <h5 class="card-header">Dorm Registration</h5>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="card-body">
-                            <p class="card-title">Hsinchu Science Park</p><hr/>
-                            <p class="card-text">
-                                Fill in <a href="#">this form</a>.<br>
-                                Submit to XXX (7XX-XXXX/7XX-XXXX)<br>
-                                Deadline: Before Onboarding Date
-                            </p>
-                        </div>
+<div>
+    <div class="card">
+        <h5 class="card-header">Dorm Registration</h5>
+        <!-- <div class="card-header info-title">Dorm Registration</div> -->
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card-body">
+                        <p class="card-text text-center">Hsinchu Science Park</p><hr/>
+                        <p class="card-text">
+                            Fill in <a href="#">this form</a>.<br>
+                            Submit to XXX (7XX-XXXX/7XX-XXXX)<br>
+                            Deadline: Before Onboarding Date
+                        </p>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="card-body">
-                            <p class="card-title">Central Taiwan Science Park</p><hr/>
-                            <p class="card-text">
-                                Fill in <a href="#">this form</a>.<br>
-                                Submit to XXX (7XX-XXXX/7XX-XXXX)<br>
-                                Deadline: Before Onboarding Date
-                            </p>
-                        </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card-body">
+                        <p class="card-text text-center">Central Taiwan Science Park</p><hr/>
+                        <p class="card-text">
+                            Fill in <a href="#">this form</a>.<br>
+                            Submit to XXX (7XX-XXXX/7XX-XXXX)<br>
+                            Deadline: Before Onboarding Date
+                        </p>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="card-body">
-                            <p class="card-title">Southern Taiwan Science Park</p><hr/>
-                            <p class="card-text">
-                                Fill in <a href="#">this form</a>.<br>
-                                Submit to XXX (7XX-XXXX/7XX-XXXX)<br>
-                                Deadline: Before Onboarding Date
-                            </p>
-                        </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card-body">
+                        <p class="card-text text-center">Southern Taiwan Science Park</p><hr/>
+                        <p class="card-text">
+                            Fill in <a href="#">this form</a>.<br>
+                            Submit to XXX (7XX-XXXX/7XX-XXXX)<br>
+                            Deadline: Before Onboarding Date
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="col">
-        <div class="card">
-            <h5 class="card-header">Traffic Information</h5>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="card-body">
-                        <p class="card-title">Hsinchu Science Park</p><hr/>
-                        <p class="card-text">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
+    <span class="col-sm-9"></span>
+    <div class="card">
+        <h5 class="card-header">Traffic Information</h5>
+        <!-- <div class="card-header info-title">Traffic Information</div> -->
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card-body">
+                    <p class="card-text text-center">Hsinchu Science Park</p><hr/>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <p class="card-text">
                                     # Fab-12A<br> 8, Li-Hsin Rd. 6, Hsinchu Science Park,<br> Hsinchu 300-78, Taiwan, R.O.C.<br> # 台積電十二A廠<br> 300-78新竹科學工業園區力行六路8號
-                                </li>
-                                <li class="list-group-item">
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="card-text">
                                     # Fab-12B<br> 168, Park Ave. II, Hsinchu Science Park,<br> Hsinchu 300-75, Taiwan, R.O.C.<br> # 台積電十二B廠<br> 300-75新竹科學工業園區園區二路168號
-                                </li>
-                                <li class="list-group-item">
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="card-text">
                                     # Fab-2/5<br> 121, Park Ave. 3, Hsinchu Science Park,<br> Hsinchu 300-77, Taiwan, R.O.C.<br> # 台積電二、五廠<br> 300-77新竹科學工業園區園區三路121號
-                                </li>
-                                <li class="list-group-item">
-                                    # Fab-3<br> 9, Creation Rd. 1, Hsinchu Science Park,<br> Hsinchu 300-77, Taiwan, R.O.C.<br> # 台積電三廠<br> 300-77新竹科學工業園區研新一路9號
-                                </li>
-                                <li class="list-group-item">
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="card-text">
+                                # Fab-3<br> 9, Creation Rd. 1, Hsinchu Science Park,<br> Hsinchu 300-77, Taiwan, R.O.C.<br> # 台積電三廠<br> 300-77新竹科學工業園區研新一路9號
+                            </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="card-text">
                                     # Fab-8<br> 25, Li-Hsin Rd., Hsinchu Science Park,<br> Hsinchu 300-78, Taiwan, R.O.C.<br> # 台積電八廠<br> 300-78新竹科學工業園區力行路25號
-                                </li>
-                            </ul>
-                        </p>
-                    </div>
+                                </p>
+                            </li>
+                        </ul>
                 </div>
-                <div class="col-sm-4">
-                    <div class="card-body">
-                        <p class="card-title">Central Taiwan Science Park</p><hr/>
-                        <p class="card-text">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
+            </div>
+            <div class="col-sm-4">
+                <div class="card-body">
+                    <p class="card-text text-center">Central Taiwan Science Park</p><hr/>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <p class="card-text">
                                     # Fab-15<br> 1, Keya Rd. 6, Central Taiwan Science Park,<br> Taichung 428-82, Taiwan, R.O.C.<br> # 台積電十五廠<br> 428-82中部科學工業園區科雅六路1號
-                                </li>
-                            </ul>
-                        </p>
-                    </div>
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
                 </div>
-                <div class="col-sm-4">
-                    <div class="card-body">
-                        <p class="card-title">Southern Taiwan Science Park</p><hr/>
-                        <p class="card-text">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
+            </div>
+            <div class="col-sm-4">
+                <div class="card-body">
+                    <p class="card-text text-center">Southern Taiwan Science Park</p><hr/>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <p class="card-text">
                                     # Fab-6<br> 1, Nan-Ke North Rd., Tainan Science Park,<br> Tainan 741-44, Taiwan, R.O.C.<br> # 台積電六廠<br> 741-44台南科學工業園區南科北路1號
-                                </li>
-                                <li class="list-group-item">
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="card-text">
                                     # Fab-14<br> 1-1, Nan-Ke North Rd., Tainan Science Park,<br> Tainan 741-44, Taiwan, R.O.C.<br> # 台積電十四廠<br> 741-44台南科學工業園區南科北路1號之1
-                                </li>
-                                <li class="list-group-item">
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="card-text">
                                     # Fab-18<br> 8, Beiyuan Rd. 2, Tainan Science Park<br> Tainan 745-43, Taiwan, R.O.C.<br> # 台積電十八廠<br> 745-43 台南科學園區北園二路8號
-                                </li>
-                            </ul>
-                        </p>
-                    </div>
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
                 </div>
             </div>
         </div>
